@@ -125,10 +125,10 @@
                 <div class="tiny-note">Live project rooms</div>
               </div>
               <div class="ui-app" aria-hidden="true">
-                <div class="ui-sidebar">
+                <div class="ui-sidebar shimmer-lines">
                   <span></span><span></span><span></span><span></span>
                 </div>
-                <div class="ui-content">
+                <div class="ui-content shimmer-lines">
                   <div class="ui-channel"></div>
                   <div class="ui-message"></div>
                   <div class="ui-message"></div>
@@ -139,7 +139,7 @@
 
             <article class="floating-card device-card"
                      aria-label="Mobile device mockup">
-              <div class="device-screen" aria-hidden="true">
+              <div class="device-screen shimmer-panel" aria-hidden="true">
                 <span></span><span></span><span></span>
                 <span></span><span></span><span></span>
               </div>
@@ -164,25 +164,34 @@
           </p>
         </div>
 
+        <!-- Pairs bot world -->
         <article class="feature-stage gradient-purple">
-          <div class="showcase-monitor" aria-hidden="true">
+          <div class="showcase-monitor pairs-bot">
             <div class="monitor-bezel">
-              <div class="monitor-left">
+              <div class="monitor-left shimmer-lines">
                 <span></span><span></span><span></span><span></span><span></span>
               </div>
               <div class="monitor-main">
-                <div class="hero-card-title">Pairs bot</div>
-                <span></span><span></span><span></span><span></span><span></span>
+                <div class="hero-card-title">Pairs bot signals</div>
+                <div class="pairs-chart">
+                  <div class="pairs-line pairs-line-a"></div>
+                  <div class="pairs-line pairs-line-b"></div>
+                  <div class="pairs-baseline"></div>
+                </div>
+                <div class="pairs-ticks">
+                  <span></span><span></span><span></span><span></span>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="feature-copy">
             <h3 class="section-title">Algorithmic tools that feel alive.</h3>
             <p>
               Finance work leans into signal hunting, automation, data
               collection, and mean-reversion thinking — but the portfolio
               presents that work as a living command center instead of a
-              text block.
+              static text block.
             </p>
             <ul class="feature-list" role="list">
               <li>Pairs trading and financial data experiments.</li>
@@ -192,29 +201,39 @@
           </div>
         </article>
 
+        <!-- Mini arcade world -->
         <article class="feature-stage gradient-green section">
           <div class="feature-copy">
             <h3 class="section-title">Browser toys with zero backend drama.</h3>
             <p>
-              Mini tools and games live directly in the browser, so they can be
-              added to the portfolio with no API, no auth, and no maintenance
-              burden — perfect for quick GitHub Pages hosting.
+              Mini tools and silly games live directly in the browser, so they
+              can be added to the portfolio with no API, no auth, and no
+              maintenance burden — perfect for GitHub Pages and quick iteration.
             </p>
             <ul class="feature-list" role="list">
-              <li>Calculator, guess game, and lane runner below.</li>
-              <li>Easy to expand with timers or text utilities.</li>
+              <li>Calculator, guessing game, and lane runner included below.</li>
+              <li>Easy to expand with timers, formatters, or converters.</li>
               <li>Everything runs client-side and stays lightweight.</li>
             </ul>
           </div>
-          <div class="showcase-monitor" aria-hidden="true">
+
+          <div class="showcase-monitor mini-arcade">
             <div class="monitor-bezel">
-              <div class="monitor-left">
+              <div class="monitor-left arcade-grid shimmer-lines">
                 <span></span><span></span><span></span><span></span>
               </div>
-              <div class="monitor-main">
+              <div class="monitor-main arcade-scene">
                 <div class="hero-card-title">Mini arcade</div>
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span>
+                <div class="arcade-row">
+                  <div class="arcade-pill arcade-pill-active">Runner</div>
+                  <div class="arcade-pill">Guess</div>
+                  <div class="arcade-pill">Calculator</div>
+                </div>
+                <div class="arcade-lane">
+                  <div class="arcade-player"></div>
+                  <div class="arcade-obstacle"></div>
+                  <div class="arcade-ground"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -255,6 +274,52 @@
             <div class="project-actions">
               <span class="status-pill">signal search</span>
               <span class="status-pill">strategy testing</span>
+            </div>
+          </article>
+
+          <!-- LineupSync -->
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-label">Product</div>
+              <h3 class="card-title">LineupSync.club</h3>
+              <p class="project-description">
+                Team lineups, scheduling, RSVPs, and chat — a cleaner way for
+                sports groups to stay in sync around matches.
+              </p>
+              <div class="stack">
+                <span>Web app</span><span>Scheduling</span><span>Teams</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a class="status-pill"
+                 href="https://lineupsync.club"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Visit site
+              </a>
+            </div>
+          </article>
+
+          <!-- VitaHive -->
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-label">Health / experiments</div>
+              <h3 class="card-title">VitaHive.org</h3>
+              <p class="project-description">
+                Fitness and health experiments hub — a space for tracking routines,
+                ideas, and biohacking-style data in a more structured way.
+              </p>
+              <div class="stack">
+                <span>Web app</span><span>Fitness</span><span>Tracking</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a class="status-pill"
+                 href="https://vitahive.org"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Visit site
+              </a>
             </div>
           </article>
 
@@ -381,8 +446,11 @@
                 <button class="calc-btn" data-calc="clear">C</button>
                 <button class="calc-btn operator" data-calc="+">+</button>
 
-                <button class="calc-btn equal" data-calc="=" style="grid-column: span 4;">
-                  Run
+                <!-- Main evaluate button now displays '=' -->
+                <button class="calc-btn equal"
+                        data-calc="="
+                        style="grid-column: span 4;">
+                  =
                 </button>
               </div>
             </div>
