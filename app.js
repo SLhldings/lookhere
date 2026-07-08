@@ -101,18 +101,26 @@
   const runnerJump = document.getElementById('runnerJump');
   const runnerFeedback = document.getElementById('runnerFeedback');
 
-  let runnerInterval = null;
-  let obstacleX = 100;
+  let runLoop = null;
+  let obstacleX = 260; // px from left
+  let playerY = 0;
   let jumping = false;
-  let jumpY = 0;
   let score = 0;
 
-  function setObstacle() {
-    runnerObstacle.style.right = -obstacleX + 'px';
+  function renderPlayer() {
+    runnerPlayer.style.transform = 'translateY(' + -playerY + 'px)';
   }
 
-  function setPlayer() {
-    runnerPlayer.style.transform = 'translateY(' + -jumpY + 'px)';
+  function renderObstacle() {
+    runnerObstacle.style.transform = 'translateX(' + -obstacleX + 'px)';
+  }
+
+  function resetRunner() {
+    obstacleX = 260;
+    playerY = 0;
+    jumping = false;
+    renderPlayer();
+    renderObstacle();
   }
 
   function jump() {
@@ -122,54 +130,52 @@
 
     const jumpTimer = setInterval(() => {
       if (up) {
-        jumpY += 8;
-        if (jumpY >= 72) {
+        playerY += 8;
+        if (playerY >= 72) {
           up = false;
         }
       } else {
-        jumpY -= 8;
-        if (jumpY <= 0) {
-          jumpY = 0;
+        playerY -= 8;
+        if (playerY <= 0) {
+          playerY = 0;
           jumping = false;
           clearInterval(jumpTimer);
         }
       }
-      setPlayer();
+      renderPlayer();
     }, 24);
   }
 
-  function stopRunner(message) {
-    clearInterval(runnerInterval);
-    runnerInterval = null;
+  function stopRun(message) {
+    clearInterval(runLoop);
+    runLoop = null;
     runnerFeedback.textContent = message + ' Score: ' + score + '.';
-    obstacleX = 100;
-    setObstacle();
+    resetRunner();
   }
 
   runnerStart.addEventListener('click', () => {
-    if (runnerInterval) return;
+    if (runLoop) return;
 
     score = 0;
-    obstacleX = 100;
-    jumpY = 0;
-    setObstacle();
-    setPlayer();
+    resetRunner();
     runnerFeedback.textContent = 'Running... jump over the block.';
 
-    runnerInterval = setInterval(() => {
-      obstacleX -= 2.8;
-      setObstacle();
+    runLoop = setInterval(() => {
+      obstacleX -= 3;
+      renderObstacle();
 
-      const overlap = obstacleX <= 32 && obstacleX >= 8;
-      const grounded = jumpY < 34;
+      // Simple collision window when obstacle reaches player x (~30px)
+      const collisionZone = obstacleX <= 40 && obstacleX >= 10;
+      const isGrounded = playerY < 34;
 
-      if (overlap && grounded) {
-        stopRunner('Crash.');
+      if (collisionZone && isGrounded) {
+        stopRun('Crash.');
         return;
       }
 
-      if (obstacleX < -24) {
-        obstacleX = 100;
+      // Loop obstacle and increase score
+      if (obstacleX < -20) {
+        obstacleX = 260;
         score += 1;
         runnerFeedback.textContent = 'Nice. Score: ' + score + '.';
       }
