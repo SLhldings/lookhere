@@ -1,19 +1,13 @@
 (function () {
-  // Theme toggle
   const root = document.documentElement;
   const toggle = document.querySelector('[data-theme-toggle]');
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
+  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
   root.setAttribute('data-theme', theme);
 
   const applyLabel = () => {
     toggle.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
-    toggle.setAttribute(
-      'aria-label',
-      theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
-    );
+    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   };
 
   applyLabel();
@@ -24,7 +18,6 @@
     applyLabel();
   });
 
-  // Calculator
   const calcDisplay = document.getElementById('calcDisplay');
   let calcExpression = '';
 
@@ -56,7 +49,6 @@
     });
   });
 
-  // Guess the number
   const guessInput = document.getElementById('guessInput');
   const guessButton = document.getElementById('guessButton');
   const guessReset = document.getElementById('guessReset');
@@ -69,8 +61,7 @@
     target = Math.floor(Math.random() * 20) + 1;
     tries = 0;
     guessInput.value = '';
-    guessFeedback.textContent =
-      'New round ready. Pick a number from 1 to 20.';
+    guessFeedback.textContent = 'New round ready. Pick a number from 1 to 20.';
   };
 
   guessButton.addEventListener('click', () => {
@@ -94,7 +85,6 @@
 
   guessReset.addEventListener('click', resetGuess);
 
-  // Lane runner
   const runnerPlayer = document.getElementById('runnerPlayer');
   const runnerObstacle = document.getElementById('runnerObstacle');
   const runnerStart = document.getElementById('runnerStart');
@@ -102,7 +92,7 @@
   const runnerFeedback = document.getElementById('runnerFeedback');
 
   let runLoop = null;
-  let obstacleX = 260; // px from left
+  let obstacleX = 260;
   let playerY = 0;
   let jumping = false;
   let score = 0;
@@ -164,7 +154,6 @@
       obstacleX -= 3;
       renderObstacle();
 
-      // Simple collision window when obstacle reaches player x (~30px)
       const collisionZone = obstacleX <= 40 && obstacleX >= 10;
       const isGrounded = playerY < 34;
 
@@ -173,7 +162,6 @@
         return;
       }
 
-      // Loop obstacle and increase score
       if (obstacleX < -20) {
         obstacleX = 260;
         score += 1;
