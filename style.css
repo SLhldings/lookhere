@@ -101,3 +101,161 @@ body {
 .section:first-of-type {
   margin-top: 80px;
 }
+/* Top Bar Navigation — three quiet words */
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 11px;
+  font-weight: var(--font-weight-w550);
+  color: var(--color-chalk);
+}
+
+.top-nav-link,
+.top-nav-brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Display headline + subtitle */
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  margin: 16px 0 8px;
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--font-weight-regular); /* whisper-weight 400 */
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  color: var(--color-ash);
+}
+
+/* AD / category badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-badges);
+  border: 1px solid var(--color-steel);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  letter-spacing: var(--tracking-caption);
+  font-weight: var(--font-weight-w475);
+  color: var(--color-smoke);
+}
+
+/* Section headings */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading {
+  margin: 0 0 8px;
+  font-size: var(--text-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  font-weight: var(--font-weight-w550);
+  color: var(--color-chalk);
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  color: var(--color-ash);
+}
+
+/* Body text */
+
+.body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  color: var(--color-ash);
+}
+
+/* Ghost subscribe / action button */
+
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: var(--radius-buttons);
+  border: 1px solid var(--color-ivory);
+  font-size: 15px;
+  font-weight: var(--font-weight-w475);
+  letter-spacing: -0.16px;
+  color: var(--color-ivory);
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Project container */
+
+.project {
+  margin-bottom: 80px; /* still keep at least 80px breathing inside section */
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.project-title {
+  margin: 16px 0 8px;
+  font-size: 24px;
+  font-weight: var(--font-weight-w550);
+  letter-spacing: -0.16px;
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  color: var(--color-ash);
+}
+
+.project-meta {
+  text-align: center;
+}
+
+.project-copy {
+  margin: 0 0 24px;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  color: var(--color-ash);
+}
+
+/* Phone / device mockup frame */
+
+.device-frame {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 32px;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-cards);
+  box-shadow: var(--shadow-xl);
+  background: #111111;
+  border: 1px solid #151515;
+  overflow: hidden;
+  display: flex;
+}
