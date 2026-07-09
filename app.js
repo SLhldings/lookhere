@@ -14,3 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.chart-line').forEach(el => {
+    el.style.animationDelay = `${Math.random() * 1.5}s`;
+  });
+});
