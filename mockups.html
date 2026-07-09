@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Mockups · International Magic</title>
+  <title>Mockups · SleekWedD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Code-built mockups from SleekWedD: Signal Room trading dashboard and Ghost Scraper automation console."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;475;500;550;650&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;475;500;550;650&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
     <header class="top-nav">
       <a href="index.html#work" class="top-nav-link">work</a>
-      <span class="top-nav-brand">mockups</span>
+      <span class="top-nav-brand">SleekWedD · mockups</span>
       <a href="index.html#contact" class="top-nav-link">contact</a>
     </header>
 
     <main>
+      <!-- Hero -->
       <section class="section hero">
         <div class="hero-content">
           <span class="badge">CODE-BUILT</span>
@@ -38,8 +46,153 @@
         </div>
 
         <div class="device-frame">
-          <!-- paste Signal Room mockup here (from previous message) -->
-          <!-- ... -->
+          <!-- Signal Room mockup -->
+          <div class="app-shell app-shell--signal">
+            <header class="app-header">
+              <div class="app-title">
+                <span class="app-name">Signal Room</span>
+                <span class="app-env-pill">PROD · EU1</span>
+              </div>
+              <div class="app-status">
+                <span class="status-dot status-online"></span>
+                <span class="status-label">broker online · 12 ms latency</span>
+              </div>
+            </header>
+
+            <div class="app-body">
+              <!-- Sidebar -->
+              <aside class="app-sidebar">
+                <div class="sidebar-section">
+                  <div class="sidebar-label">strategies</div>
+                  <ul class="sidebar-list">
+                    <li class="sidebar-item sidebar-item-active">
+                      <span>pairs-alpha</span>
+                      <span class="tag tag-running">running</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>mean-revert-eu</span>
+                      <span class="tag tag-paused">paused</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>breakout-us</span>
+                      <span class="tag tag-error">error</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>vol-arb-asia</span>
+                      <span class="tag tag-running">running</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sidebar-section">
+                  <div class="sidebar-label">filters</div>
+                  <div class="sidebar-filter-row">
+                    <button class="pill pill-active">all</button>
+                    <button class="pill">running</button>
+                    <button class="pill">paused</button>
+                    <button class="pill">error</button>
+                  </div>
+                </div>
+
+                <div class="sidebar-section">
+                  <div class="sidebar-label">latency bands</div>
+                  <div class="latency-badges">
+                    <span class="latency-pill latency-good">0–20 ms</span>
+                    <span class="latency-pill latency-warn">20–50 ms</span>
+                    <span class="latency-pill latency-bad">50 ms+</span>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Main -->
+              <div class="app-main">
+                <div class="metrics-row">
+                  <div class="metric-card">
+                    <div class="metric-label">net pnl (24h)</div>
+                    <div class="metric-value metric-positive">+2.37%</div>
+                  </div>
+                  <div class="metric-card">
+                    <div class="metric-label">open positions</div>
+                    <div class="metric-value">18</div>
+                  </div>
+                  <div class="metric-card">
+                    <div class="metric-label">max drawdown (30d)</div>
+                    <div class="metric-value metric-negative">-4.12%</div>
+                  </div>
+                </div>
+
+                <div class="chart-card">
+                  <div class="chart-header">
+                    <span class="chart-title">equity curve</span>
+                    <span class="chart-range">30d</span>
+                  </div>
+                  <div class="chart-body chart-placeholder">
+                    <div class="chart-line"></div>
+                  </div>
+                </div>
+
+                <div class="table-card">
+                  <div class="table-header">
+                    <span class="table-title">open positions</span>
+                    <span class="table-subtitle">latency 12 ms · 3 venues</span>
+                  </div>
+                  <table class="positions-table">
+                    <thead>
+                      <tr>
+                        <th>symbol</th>
+                        <th>side</th>
+                        <th>size</th>
+                        <th>entry</th>
+                        <th>last</th>
+                        <th>pnl</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>ETH/USDT</td>
+                        <td>long</td>
+                        <td>4.20</td>
+                        <td>3,162.40</td>
+                        <td>3,204.80</td>
+                        <td class="pnl-positive">+1.34%</td>
+                      </tr>
+                      <tr>
+                        <td>BTC/USDT</td>
+                        <td>short</td>
+                        <td>0.75</td>
+                        <td>61,420.10</td>
+                        <td>60,880.50</td>
+                        <td class="pnl-positive">+0.88%</td>
+                      </tr>
+                      <tr>
+                        <td>SOL/USDT</td>
+                        <td>long</td>
+                        <td>35.00</td>
+                        <td>146.90</td>
+                        <td>143.20</td>
+                        <td class="pnl-negative">-2.52%</td>
+                      </tr>
+                      <tr>
+                        <td>OP/USDT</td>
+                        <td>short</td>
+                        <td>220.00</td>
+                        <td>2.84</td>
+                        <td>2.79</td>
+                        <td class="pnl-positive">+1.76%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-meta">
+          <p class="project-copy">
+            Speculative dashboard interface with strategy sidebar, equity curve,
+            and live positions—all rendered directly in code.
+          </p>
         </div>
       </section>
 
@@ -53,8 +206,149 @@
         </div>
 
         <div class="device-frame">
-          <!-- paste Ghost Scraper mockup here (from previous message) -->
-          <!-- ... -->
+          <!-- Ghost Scraper mockup -->
+          <div class="app-shell app-shell--ghost">
+            <header class="app-header">
+              <div class="app-title">
+                <span class="app-name">Ghost Scraper</span>
+                <span class="app-env-pill">OPS · NIGHTLY</span>
+              </div>
+              <div class="app-status">
+                <span class="status-dot status-online"></span>
+                <span class="status-label">queue healthy · 7 jobs running</span>
+              </div>
+            </header>
+
+            <div class="app-body app-body--ghost">
+              <aside class="app-sidebar">
+                <div class="sidebar-section">
+                  <div class="sidebar-label">job groups</div>
+                  <ul class="sidebar-list">
+                    <li class="sidebar-item sidebar-item-active">
+                      <span>product feeds</span>
+                      <span class="tag tag-running">3 live</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>news</span>
+                      <span class="tag tag-running">2 live</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>competitors</span>
+                      <span class="tag tag-paused">paused</span>
+                    </li>
+                    <li class="sidebar-item">
+                      <span>experiments</span>
+                      <span class="tag tag-error">failing</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sidebar-section">
+                  <div class="sidebar-label">controls</div>
+                  <div class="sidebar-filter-row">
+                    <button class="pill pill-active">queue</button>
+                    <button class="pill">logs</button>
+                    <button class="pill">schedules</button>
+                  </div>
+                </div>
+              </aside>
+
+              <div class="app-main app-main--ghost">
+                <div class="table-card table-card--ghost">
+                  <div class="table-header">
+                    <span class="table-title">jobs · product feeds</span>
+                    <span class="table-subtitle">next run in 11 min</span>
+                  </div>
+                  <table class="jobs-table">
+                    <thead>
+                      <tr>
+                        <th>job</th>
+                        <th>frequency</th>
+                        <th>last run</th>
+                        <th>duration</th>
+                        <th>errors</th>
+                        <th>status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>amazon-eu</td>
+                        <td>15 min</td>
+                        <td>23:04</td>
+                        <td>01:12</td>
+                        <td>0</td>
+                        <td><span class="status-pill status-pill-ok">ok</span></td>
+                      </tr>
+                      <tr>
+                        <td>ebay-global</td>
+                        <td>30 min</td>
+                        <td>22:52</td>
+                        <td>01:45</td>
+                        <td>3</td>
+                        <td><span class="status-pill status-pill-warn">warn</span></td>
+                      </tr>
+                      <tr>
+                        <td>aliexpress</td>
+                        <td>60 min</td>
+                        <td>22:16</td>
+                        <td>02:08</td>
+                        <td>0</td>
+                        <td><span class="status-pill status-pill-ok">ok</span></td>
+                      </tr>
+                      <tr>
+                        <td>shopify-direct</td>
+                        <td>cron</td>
+                        <td>21:44</td>
+                        <td>00:34</td>
+                        <td>7</td>
+                        <td><span class="status-pill status-pill-error">error</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="logs-card">
+                  <div class="logs-header">
+                    <span class="logs-title">live logs · shopify-direct</span>
+                    <span class="logs-level">INFO · WARN · ERROR</span>
+                  </div>
+                  <div class="logs-body">
+                    <div class="log-line log-info">
+                      <span class="log-ts">21:44:03</span>
+                      <span class="log-msg">[INFO] starting job shopify-direct · shard 1/3</span>
+                    </div>
+                    <div class="log-line log-info">
+                      <span class="log-ts">21:44:05</span>
+                      <span class="log-msg">[INFO] loaded 428 product URLs from cache</span>
+                    </div>
+                    <div class="log-line log-warn">
+                      <span class="log-ts">21:44:12</span>
+                      <span class="log-msg">[WARN] rate limit soft-throttled · backing off 500 ms</span>
+                    </div>
+                    <div class="log-line log-info">
+                      <span class="log-ts">21:44:22</span>
+                      <span class="log-msg">[INFO] resumed scrape · progress 68%</span>
+                    </div>
+                    <div class="log-line log-error">
+                      <span class="log-ts">21:44:31</span>
+                      <span class="log-msg">[ERROR] 502 from origin · retry budget exceeded</span>
+                    </div>
+                    <div class="log-line log-error">
+                      <span class="log-ts">21:44:34</span>
+                      <span class="log-msg">[ERROR] marking job failed · queued for manual review</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-meta">
+          <p class="project-copy">
+            Operator UI for scraping pipelines—jobs as cards, status pills, and
+            a monospace log stream for real-time feedback.
+          </p>
         </div>
       </section>
     </main>
