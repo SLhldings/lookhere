@@ -7,176 +7,93 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;475;500;550;650&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
-    <!-- Top navigation -->
     <header class="top-nav">
       <a href="#work" class="top-nav-link">work</a>
-      <span class="top-nav-brand">international magic</span>
+      <a href="mockups.html" class="top-nav-link">mockups</a>
       <a href="#contact" class="top-nav-link">contact</a>
     </header>
 
-    <!-- Hero -->
     <main>
       <section class="section hero">
         <div class="hero-content">
           <span class="badge">WEB DESIGN · TALLINN</span>
-          <h1 class="hero-title">midnight gallery</h1>
+          <h1 class="hero-title">international magic</h1>
           <p class="hero-subtitle">
             Dark, quiet interfaces for tools, dashboards, and small products.
           </p>
         </div>
       </section>
 
-      <!-- Work -->
       <section id="work" class="section">
         <div class="section-heading">
-          <h2 class="heading">selected studies</h2>
+          <h2 class="heading">selected work</h2>
           <p class="section-subtitle">
-            Code-built mockups for products that could ship tomorrow.
+            Live products and code-built mockups.
           </p>
         </div>
 
-        <!-- Signal Room mock app -->
         <article class="project">
           <header class="project-header">
-            <span class="badge">CONCEPT · TRADING</span>
-            <h3 class="project-title">Signal Room</h3>
+            <span class="badge">LIVE</span>
+            <h3 class="project-title">LineupSync</h3>
             <p class="project-subtitle">
-              A control room for algorithmic strategies, designed like a tool not a toy.
+              Squad and fixtures interface designed for coaches, not feeds.
             </p>
           </header>
-
-          <div class="device-frame">
-            <div class="app-shell">
-              <header class="app-header">
-                <div class="app-title">
-                  <span class="app-name">Signal Room</span>
-                  <span class="app-env-pill">PROD · EU1</span>
-                </div>
-                <div class="app-status">
-                  <span class="status-dot status-online"></span>
-                  <span class="status-label">broker online · 12 ms latency</span>
-                </div>
-              </header>
-
-              <div class="app-body">
-                <aside class="app-sidebar">
-                  <div class="sidebar-section">
-                    <div class="sidebar-label">strategies</div>
-                    <ul class="sidebar-list">
-                      <li class="sidebar-item sidebar-item-active">
-                        <span>pairs-alpha</span>
-                        <span class="tag tag-running">running</span>
-                      </li>
-                      <li class="sidebar-item">
-                        <span>mean-revert-eu</span>
-                        <span class="tag tag-paused">paused</span>
-                      </li>
-                      <li class="sidebar-item">
-                        <span>breakout-us</span>
-                        <span class="tag tag-error">error</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sidebar-section">
-                    <div class="sidebar-label">filters</div>
-                    <div class="sidebar-filter-row">
-                      <button class="pill pill-active">all</button>
-                      <button class="pill">running</button>
-                      <button class="pill">paused</button>
-                      <button class="pill">error</button>
-                    </div>
-                  </div>
-                </aside>
-
-                <div class="app-main">
-                  <div class="metrics-row">
-                    <div class="metric-card">
-                      <div class="metric-label">net pnl (24h)</div>
-                      <div class="metric-value">+2.37%</div>
-                    </div>
-                    <div class="metric-card">
-                      <div class="metric-label">open positions</div>
-                      <div class="metric-value">18</div>
-                    </div>
-                    <div class="metric-card">
-                      <div class="metric-label">max drawdown (30d)</div>
-                      <div class="metric-value">-4.12%</div>
-                    </div>
-                  </div>
-
-                  <div class="chart-card">
-                    <div class="chart-header">
-                      <span class="chart-title">equity curve</span>
-                      <span class="chart-range">30d</span>
-                    </div>
-                    <div class="chart-body chart-placeholder"></div>
-                  </div>
-
-                  <div class="table-card">
-                    <div class="table-header">
-                      <span class="table-title">open positions</span>
-                      <span class="table-subtitle">latency 12 ms · 3 venues</span>
-                    </div>
-                    <table class="positions-table">
-                      <thead>
-                        <tr>
-                          <th>symbol</th>
-                          <th>side</th>
-                          <th>size</th>
-                          <th>entry</th>
-                          <th>last</th>
-                          <th>pnl</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>ETH/USDT</td>
-                          <td>long</td>
-                          <td>4.20</td>
-                          <td>3,162.40</td>
-                          <td>3,204.80</td>
-                          <td class="pnl-positive">+1.34%</td>
-                        </tr>
-                        <tr>
-                          <td>BTC/USDT</td>
-                          <td>short</td>
-                          <td>0.75</td>
-                          <td>61,420.10</td>
-                          <td>60,880.50</td>
-                          <td class="pnl-positive">+0.88%</td>
-                        </tr>
-                        <tr>
-                          <td>SOL/USDT</td>
-                          <td>long</td>
-                          <td>35.0</td>
-                          <td>146.90</td>
-                          <td>143.20</td>
-                          <td class="pnl-negative">-2.52%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="project-meta">
             <p class="project-copy">
-              A speculative dashboard for live strategies: status-first sidebar, latency-aware header,
-              and a typography-led table instead of noisy charts.
+              End-to-end product and interface work on a web app that keeps teams,
+              players, and matches synchronized.
             </p>
+            <a href="https://lineupsync.club" target="_blank" rel="noreferrer" class="ghost-button">
+              visit lineupsync.club
+            </a>
           </div>
         </article>
 
-        <!-- TODO: add Ghost Scraper, LineupSync, VitaHive mockups similarly -->
+        <article class="project">
+          <header class="project-header">
+            <span class="badge">LIVE</span>
+            <h3 class="project-title">VitaHive</h3>
+            <p class="project-subtitle">
+              Evidence-based nutrition interface built around calm, legible data.[web:1][web:2]
+            </p>
+          </header>
+          <div class="project-meta">
+            <p class="project-copy">
+              Interface and system design support for an AI-powered nutrition platform
+              with research-backed guidance and transparent data.
+            </p>
+            <a href="https://vitahive.org" target="_blank" rel="noreferrer" class="ghost-button">
+              visit vitahive.org
+            </a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project-header">
+            <span class="badge">STUDIES</span>
+            <h3 class="project-title">Signal Room & Ghost Scraper</h3>
+            <p class="project-subtitle">
+              Trading and scraping dashboards built directly in HTML/CSS.
+            </p>
+          </header>
+          <div class="project-meta">
+            <p class="project-copy">
+              Two speculative interfaces that explore how dense data and job logs can
+              stay readable inside a dark, quiet frame.
+            </p>
+            <a href="mockups.html" class="ghost-button">
+              view mockups
+            </a>
+          </div>
+        </article>
       </section>
 
-      <!-- Contact -->
       <section id="contact" class="section">
         <div class="section-heading">
           <h2 class="heading">contact</h2>
@@ -190,5 +107,7 @@
       </section>
     </main>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
